@@ -1,4 +1,7 @@
 #!/usr/bin/env fish
 
+set -l script_dir (realpath (dirname (status -f)))
+
 # bat 
-ln -s (pwd)/config ~/.config/bat/config
+mkdir -p ~/.config/bat
+ln -s {$script_dir}/bat/config ~/.config/bat/config
